@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Maria Sol - Grabado láser personalizado en mates, madera y metal. Regalos personalizados, productos únicos y grabados de alta precisión."
-  />
-  <meta
-    name="keywords"
-    content="grabado láser personalizado, mates grabados, regalos personalizados, grabado en madera, grabado en metal"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maria Sol ofrece grabado láser personalizado en mates, madera y metal. Regalos personalizados, termos, bombillas y más con calidad profesional.">
+  <meta name="keywords" content="grabado láser personalizado, mates grabados, regalos personalizados, grabado en madera, grabado en metal">
   <title>Maria Sol | Grabado Láser Personalizado</title>
   <style>
-    /* ===============================
-       Base / Variables
-    =============================== */
+    /* ========= Base / Variables ========= */
     :root {
-      --black: #101010;
+      --black: #111111;
       --white: #ffffff;
-      --gold: #c9a24f;
-      --whatsapp: #25d366;
-      --shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-      --radius: 14px;
+      --gold: #caa24f;
+      --wa: #25d366;
+      --shadow: 0 8px 20px rgba(17, 17, 17, 0.1);
     }
 
     * {
@@ -36,320 +27,353 @@
     }
 
     body {
-      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      font-family: "Montserrat", "Segoe UI", Tahoma, Arial, sans-serif;
       background: var(--white);
       color: var(--black);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       display: block;
     }
 
     .container {
-      width: min(1140px, 92%);
+      width: min(1120px, 92%);
       margin: 0 auto;
     }
 
     .section {
-      padding: 48px 0;
+      padding: 52px 0;
     }
 
     .section-title {
-      font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+      font-size: clamp(1.6rem, 3.3vw, 2.2rem);
       margin-bottom: 14px;
-      letter-spacing: 0.2px;
+      color: var(--black);
     }
 
     .section-text {
       max-width: 860px;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      color: #202020;
     }
 
-    .chip {
-      display: inline-block;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-      font-weight: 600;
+    .muted {
+      color: #393939;
+      font-size: 0.98rem;
     }
 
-    /* ===============================
-       Header / Hero
-    =============================== */
-    .hero {
-      min-height: 82vh;
-      background:
-        linear-gradient(to bottom, rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.7)),
-        url("https://images.unsplash.com/photo-1459200882040-1de6f2f9b16b?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+    /* ========= Header / Nav ========= */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(17, 17, 17, 0.96);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand {
       color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.4px;
+      font-size: 1.08rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* ========= Hero ========= */
+    .hero {
+      color: var(--white);
+      min-height: 75vh;
       display: grid;
       align-items: center;
-      border-bottom: 3px solid var(--gold);
+      background:
+        linear-gradient(100deg, rgba(17, 17, 17, 0.82), rgba(17, 17, 17, 0.58)),
+        url("https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?auto=format&fit=crop&w=1600&q=70") center/cover no-repeat;
     }
 
     .hero-content {
-      padding: 70px 0;
-      max-width: 720px;
-      animation: fadeUp 0.75s ease both;
+      max-width: 760px;
+      animation: fadeUp 0.7s ease both;
+      padding: 44px 0;
     }
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.15;
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.12;
       margin-bottom: 14px;
     }
 
     .hero p {
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: clamp(1rem, 2vw, 1.15rem);
       margin-bottom: 22px;
+      color: #f1f1f1;
     }
 
     .btn {
       display: inline-block;
       text-decoration: none;
-      border: 2px solid var(--black);
-      border-radius: 12px;
-      padding: 14px 24px;
-      font-weight: 700;
-      transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
+      border: 2px solid var(--gold);
       background: var(--gold);
-      border-color: var(--gold);
       color: var(--black);
-      font-size: 1.04rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      padding: 14px 26px;
+      border-radius: 999px;
+      transition: transform 0.2s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .btn-primary:hover {
+    .btn:hover {
       transform: translateY(-2px);
-      background: var(--white);
-      border-color: var(--white);
-    }
-
-    .btn-secondary {
       background: var(--black);
       color: var(--white);
-      border-color: var(--black);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-block {
       width: 100%;
       text-align: center;
-      padding: 12px 16px;
+      border-radius: 10px;
+      padding: 13px 14px;
       font-size: 0.98rem;
     }
 
-    .btn-secondary:hover {
-      transform: translateY(-2px);
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    .btn-dark:hover {
       background: var(--gold);
       color: var(--black);
       border-color: var(--gold);
     }
 
-    /* ===============================
-       Product Cards
-    =============================== */
-    .product-category {
-      margin-top: 26px;
-    }
-
-    .product-category h3 {
-      margin-bottom: 12px;
-      font-size: 1.2rem;
-      color: var(--gold);
+    /* ========= Product Cards ========= */
+    .subsection-title {
+      font-size: 1.3rem;
+      margin: 24px 0 12px;
+      border-left: 4px solid var(--gold);
+      padding-left: 10px;
     }
 
     .grid {
       display: grid;
-      gap: 16px;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
     }
 
     .card {
-      border: 1px solid rgba(201, 162, 79, 0.45);
-      border-radius: var(--radius);
-      overflow: hidden;
       background: var(--white);
-      box-shadow: var(--shadow);
-      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      border: 1px solid #e9e9e9;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(17, 17, 17, 0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       animation: fadeUp 0.6s ease both;
     }
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+      box-shadow: var(--shadow);
     }
 
-    .card-image {
-      position: relative;
+    .card-media {
+      height: 190px;
       overflow: hidden;
-      background: #f6f6f6;
-      aspect-ratio: 4 / 3;
+      background: #f4f4f4;
     }
 
-    .card-image img {
-      width: 100%;
+    .card-media img {
       height: 100%;
       object-fit: cover;
       transition: transform 0.35s ease;
     }
 
-    .card:hover .card-image img {
+    .card:hover .card-media img {
       transform: scale(1.06);
     }
 
-    .card-content {
+    .card-body {
       padding: 14px;
       display: grid;
       gap: 8px;
     }
 
     .card-title {
-      font-size: 1.03rem;
+      font-size: 1.04rem;
       font-weight: 700;
     }
 
-    .card-desc {
-      font-size: 0.92rem;
-    }
-
-    .price-wrap {
-      border: 1px dashed var(--gold);
-      border-radius: 10px;
-      padding: 8px;
-      font-size: 0.9rem;
-    }
-
-    .price-wrap strong {
-      display: block;
+    .price-box {
+      display: grid;
+      gap: 2px;
+      border-top: 1px dashed #dddddd;
+      border-bottom: 1px dashed #dddddd;
+      padding: 8px 0;
+      margin-top: 2px;
       margin-bottom: 2px;
     }
 
-    /* ===============================
-       Gallery / FAQ / Contact
-    =============================== */
-    .gallery {
+    .price {
+      font-weight: 700;
+      font-size: 0.97rem;
+    }
+
+    /* ========= Gallery ========= */
+    .work-grid {
       display: grid;
-      gap: 14px;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
     }
 
-    .gallery-item {
-      border-radius: var(--radius);
-      border: 1px solid rgba(201, 162, 79, 0.45);
+    .work-item {
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: var(--shadow);
-      background: var(--white);
+      border: 1px solid #ececec;
+      transition: transform 0.25s ease;
     }
 
-    .gallery-item figcaption {
+    .work-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .work-item img {
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .work-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .work-item figcaption {
       padding: 10px 12px;
-      font-size: 0.9rem;
-      font-weight: 600;
+      font-size: 0.93rem;
+      background: #fbfbfb;
     }
 
-    .about-box {
-      border: 1px solid rgba(201, 162, 79, 0.45);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
+    /* ========= FAQ ========= */
+    .faq {
       display: grid;
       gap: 10px;
     }
 
     details {
-      border: 1px solid rgba(201, 162, 79, 0.45);
+      border: 1px solid #e8e8e8;
       border-radius: 10px;
-      padding: 12px 14px;
-      margin-bottom: 10px;
-      background: var(--white);
+      padding: 10px 12px;
+      background: #fcfcfc;
+      transition: border-color 0.25s ease;
+    }
+
+    details[open] {
+      border-color: var(--gold);
     }
 
     summary {
-      cursor: pointer;
       font-weight: 700;
+      cursor: pointer;
       list-style: none;
-      position: relative;
-      padding-right: 20px;
     }
 
-    summary::after {
-      content: "+";
-      position: absolute;
-      right: 0;
-      top: 0;
-      color: var(--gold);
-      font-weight: 800;
-    }
-
-    details[open] summary::after {
-      content: "−";
+    summary::-webkit-details-marker {
+      display: none;
     }
 
     details p {
       margin-top: 8px;
-      font-size: 0.95rem;
+      color: #2d2d2d;
+      font-size: 0.96rem;
     }
 
-    .contact-grid {
+    /* ========= Contact ========= */
+    .contact-list {
       display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px;
+      margin: 10px 0 14px;
     }
 
-    .contact-card {
-      border: 1px solid rgba(201, 162, 79, 0.45);
-      border-radius: 10px;
-      padding: 14px;
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-card a {
+    .contact-list a {
       color: var(--black);
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
+    }
+
+    .contact-list a:hover {
+      color: var(--gold);
     }
 
     footer {
-      border-top: 2px solid var(--gold);
-      padding: 16px 0 28px;
+      background: var(--black);
+      color: var(--white);
       text-align: center;
+      padding: 18px;
+      margin-top: 24px;
       font-size: 0.92rem;
     }
 
-    /* Floating WhatsApp button */
+    /* ========= Floating WhatsApp ========= */
     .floating-wa {
       position: fixed;
       right: 16px;
       bottom: 16px;
-      z-index: 999;
-      background: var(--whatsapp);
-      color: var(--white);
-      text-decoration: none;
-      border-radius: 999px;
-      width: 60px;
-      height: 60px;
+      width: 58px;
+      height: 58px;
       display: grid;
       place-items: center;
+      border-radius: 50%;
+      background: var(--wa);
+      color: var(--white);
       font-size: 1.7rem;
-      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.38);
-      transition: transform 0.25s ease, filter 0.25s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(37, 211, 102, 0.45);
+      z-index: 50;
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
     }
 
     .floating-wa:hover {
-      transform: translateY(-2px) scale(1.04);
-      filter: brightness(1.05);
+      transform: scale(1.07);
+      box-shadow: 0 10px 22px rgba(37, 211, 102, 0.55);
     }
 
+    /* ========= Animations ========= */
     @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(8px);
       }
       to {
         opacity: 1;
@@ -357,302 +381,283 @@
       }
     }
 
+    /* ========= Mobile ========= */
     @media (max-width: 700px) {
       .section {
-        padding: 36px 0;
+        padding: 38px 0;
       }
 
-      .hero {
-        min-height: 72vh;
+      .nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
       }
 
-      .hero-content {
-        padding: 54px 0;
+      .nav-links {
+        justify-content: center;
       }
 
-      .btn,
-      .btn-secondary,
-      .btn-primary {
-        width: 100%;
-        text-align: center;
+      .card-media {
+        height: 170px;
+      }
+
+      .work-item img {
+        height: 190px;
+      }
+
+      .btn {
+        padding: 14px 20px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <header class="hero" id="inicio">
-    <div class="container hero-content">
-      <span class="chip">Maria Sol · Grabado Láser Personalizado</span>
-      <h1>Maria Sol</h1>
-      <p>
-        Diseños únicos en <strong>grabado láser personalizado</strong> para <strong>mates grabados</strong>,
-        <strong>regalos personalizados</strong>, y piezas con <strong>grabado en madera</strong> y
-        <strong>grabado en metal</strong>.
-      </p>
-      <a class="btn btn-primary" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-    </div>
+  <!-- Header / navegación -->
+  <header class="topbar">
+    <nav class="container nav" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">Maria Sol | Grabado Láser</a>
+      <div class="nav-links">
+        <a href="#productos">Productos</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
   </header>
 
+  <!-- Hero principal -->
+  <section class="hero" id="inicio">
+    <div class="container hero-content">
+      <h1>Maria Sol - Grabado Láser Personalizado</h1>
+      <p>Diseñamos <strong>mates grabados</strong> y <strong>regalos personalizados</strong> con acabado premium. Hacemos <strong>grabado en madera</strong>, <strong>grabado en metal</strong> y más piezas únicas para vos, tu marca o tu emprendimiento.</p>
+      <a class="btn" href="https://wa.me/5491156424672?text=Hola%20Maria%20Sol%2C%20quiero%20consultar%20por%20un%20grabado%20l%C3%A1ser%20personalizado" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+    </div>
+  </section>
+
   <main>
-    <!-- PRODUCT SECTIONS -->
+    <!-- Productos -->
     <section class="section" id="productos">
       <div class="container">
         <h2 class="section-title">Productos</h2>
-        <p class="section-text">
-          Elegí tu producto y personalizalo con nombre, frase, logo o diseño. En cada tarjeta podés ver
-          <strong>precio del producto</strong> y <strong>precio solo del grabado láser</strong>.
-        </p>
+        <p class="section-text">Galería tipo tienda con tarjetas de producto. Reemplazá las imágenes de ejemplo por fotos reales cuando quieras publicar la versión final.</p>
 
-        <!-- MATES -->
-        <div class="product-category">
-          <h3>MATES</h3>
-          <div class="grid">
-            <article class="card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?auto=format&fit=crop&w=800&q=70" alt="Placeholder mate imperial grabado" loading="lazy" />
+        <!-- Mates -->
+        <h3 class="subsection-title">Mates</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="card-media"><img src="mate1.jpg" alt="Mate imperial grabado láser"></div>
+            <div class="card-body">
+              <h4 class="card-title">Mate imperial</h4>
+              <p class="muted">Producto ideal para un regalo personalizado elegante.</p>
+              <div class="price-box">
+                <p class="price">Precio producto: $XX.XXX</p>
+                <p class="price">Solo grabado láser: $X.XXX</p>
               </div>
-              <div class="card-content">
-                <h4 class="card-title">Mate imperial</h4>
-                <p class="card-desc">Mate premium con opción de grabado láser personalizado.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Mate%20Imperial" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20del%20Mate%20imperial" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
 
-            <article class="card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1567598508481-65985588e295?auto=format&fit=crop&w=800&q=70" alt="Placeholder mate camionero grabado" loading="lazy" />
+          <article class="card">
+            <div class="card-media"><img src="mate 2.jpg" alt="Mate camionero grabado personalizado"></div>
+            <div class="card-body">
+              <h4 class="card-title">Mate camionero</h4>
+              <p class="muted">Estilo clásico con grabado láser personalizado.</p>
+              <div class="price-box">
+                <p class="price">Precio producto: $XX.XXX</p>
+                <p class="price">Solo grabado láser: $X.XXX</p>
               </div>
-              <div class="card-content">
-                <h4 class="card-title">Mate camionero</h4>
-                <p class="card-desc">Diseño clásico, ideal para uso diario o regalo personalizado.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Mate%20Camionero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20del%20Mate%20camionero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
 
-            <article class="card">
-              <div class="card-image">
-                <img src="mate 2.jpg" alt="Mate premium grabado" loading="lazy" />
+          <article class="card">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=70" alt="Placeholder para foto real de mate premium"></div>
+            <div class="card-body">
+              <h4 class="card-title">Mate premium</h4>
+              <p class="muted">Terminación premium para eventos y regalos.</p>
+              <div class="price-box">
+                <p class="price">Precio producto: $XX.XXX</p>
+                <p class="price">Solo grabado láser: $X.XXX</p>
               </div>
-              <div class="card-content">
-                <h4 class="card-title">Mate premium</h4>
-                <p class="card-desc">Acabado elegante y grabado preciso para regalos personalizados.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Mate%20Premium" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20del%20Mate%20premium" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
 
-            <article class="card">
-              <div class="card-image">
-                <img src="mate1.jpg" alt="Mate clásico grabado" loading="lazy" />
+          <article class="card">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=70" alt="Placeholder para foto real de mate clásico"></div>
+            <div class="card-body">
+              <h4 class="card-title">Mate clásico</h4>
+              <p class="muted">Opción simple y duradera con diseño a elección.</p>
+              <div class="price-box">
+                <p class="price">Precio producto: $XX.XXX</p>
+                <p class="price">Solo grabado láser: $X.XXX</p>
               </div>
-              <div class="card-content">
-                <h4 class="card-title">Mate clásico</h4>
-                <p class="card-desc">Simple, cómodo y perfecto para grabados con nombres o frases.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Mate%20Clasico" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-          </div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20del%20Mate%20cl%C3%A1sico" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
         </div>
 
-        <!-- ACCESORIOS -->
-        <div class="product-category">
-          <h3>ACCESORIOS</h3>
-          <div class="grid">
-            <article class="card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=70" alt="Placeholder bombillas personalizadas" loading="lazy" />
-              </div>
-              <div class="card-content">
-                <h4 class="card-title">Bombillas</h4>
-                <p class="card-desc">Bombillas con grabado fino para personal o marca.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Bombillas" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-image">
-                <img src="termo1.jpg" alt="Termo grabado" loading="lazy" />
-              </div>
-              <div class="card-content">
-                <h4 class="card-title">Termos</h4>
-                <p class="card-desc">Termos con grabado en metal duradero y de alta calidad.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Termos" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1525088553748-01d6e210e00b?auto=format&fit=crop&w=800&q=70" alt="Placeholder matera personalizada" loading="lazy" />
-              </div>
-              <div class="card-content">
-                <h4 class="card-title">Materas</h4>
-                <p class="card-desc">Materas funcionales con opción de grabado personalizado.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Materas" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=70" alt="Placeholder dije grabado" loading="lazy" />
-              </div>
-              <div class="card-content">
-                <h4 class="card-title">Dijes</h4>
-                <p class="card-desc">Dijes para cadenas con grabado láser personalizado en metal.</p>
-                <div class="price-wrap"><strong>Producto: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Dijes" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-          </div>
+        <!-- Accesorios -->
+        <h3 class="subsection-title">Accesorios</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=70" alt="Placeholder de bombillas grabadas"></div>
+            <div class="card-body">
+              <h4 class="card-title">Bombillas</h4>
+              <p class="muted">Bombillas con iniciales, nombre o marca.</p>
+              <div class="price-box"><p class="price">Precio producto: $XX.XXX</p><p class="price">Solo grabado láser: $X.XXX</p></div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20de%20Bombillas" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="termo1.jpg" alt="Termo grabado personalizado"></div>
+            <div class="card-body">
+              <h4 class="card-title">Termos</h4>
+              <p class="muted">Termos con grabado en metal de alta precisión.</p>
+              <div class="price-box"><p class="price">Precio producto: $XX.XXX</p><p class="price">Solo grabado láser: $X.XXX</p></div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20de%20Termos" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1622484212850-eb596d769edc?auto=format&fit=crop&w=900&q=70" alt="Placeholder de materas personalizadas"></div>
+            <div class="card-body">
+              <h4 class="card-title">Materas</h4>
+              <p class="muted">Materas con diseño exclusivo para uso diario.</p>
+              <div class="price-box"><p class="price">Precio producto: $XX.XXX</p><p class="price">Solo grabado láser: $X.XXX</p></div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20de%20Materas" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=900&q=70" alt="Placeholder de dijes grabados"></div>
+            <div class="card-body">
+              <h4 class="card-title">Dijes</h4>
+              <p class="muted">Dijes finos con nombres y símbolos especiales.</p>
+              <div class="price-box"><p class="price">Precio producto: $XX.XXX</p><p class="price">Solo grabado láser: $X.XXX</p></div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20precio%20de%20Dijes" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
         </div>
 
-        <!-- GRABADOS PERSONALIZADOS -->
-        <div class="product-category">
-          <h3>GRABADOS PERSONALIZADOS</h3>
-          <div class="grid">
-            <article class="card">
-              <div class="card-image">
-                <img src="mate1.jpg" alt="Grabado en mates" loading="lazy" />
-              </div>
-              <div class="card-content">
-                <h4 class="card-title">Grabado en mates</h4>
-                <p class="card-desc">Personalización detallada para mates clásicos o premium.</p>
-                <div class="price-wrap"><strong>Producto con grabado: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Grabado%20en%20Mates" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1452457807411-4979b707c5be?auto=format&fit=crop&w=800&q=70" alt="Grabado en madera" loading="lazy" />
-              </div>
-              <div class="card-content">
-                <h4 class="card-title">Grabado en madera</h4>
-                <p class="card-desc">Ideal para regalos personalizados y piezas decorativas.</p>
-                <div class="price-wrap"><strong>Producto con grabado: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Grabado%20en%20Madera" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-image">
-                <img src="termo1.jpg" alt="Grabado en metal" loading="lazy" />
-              </div>
-              <div class="card-content">
-                <h4 class="card-title">Grabado en metal</h4>
-                <p class="card-desc">Grabado láser de alta precisión y gran durabilidad.</p>
-                <div class="price-wrap"><strong>Producto con grabado: $XX.XXX</strong>Solo grabado láser: $X.XXX</div>
-                <a class="btn btn-secondary" href="https://wa.me/5491156424672?text=Hola%20quiero%20consultar%20por%20Grabado%20en%20Metal" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-              </div>
-            </article>
-          </div>
+        <!-- Grabados personalizados -->
+        <h3 class="subsection-title">Grabados personalizados</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="card-media"><img src="mate1.jpg" alt="Grabado en mates"></div>
+            <div class="card-body">
+              <h4 class="card-title">Grabado en mates</h4>
+              <p class="muted">Personalización con nombre, fecha o frase.</p>
+              <div class="price-box"><p class="price">Precio producto: según modelo</p><p class="price">Solo grabado láser: desde $X.XXX</p></div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20grabado%20en%20mates" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1590246814883-57c511a1f7c5?auto=format&fit=crop&w=900&q=70" alt="Grabado en madera"></div>
+            <div class="card-body">
+              <h4 class="card-title">Grabado en madera</h4>
+              <p class="muted">Ideal para placas, souvenirs y regalos.</p>
+              <div class="price-box"><p class="price">Precio producto: según pieza</p><p class="price">Solo grabado láser: desde $X.XXX</p></div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20grabado%20en%20madera" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media"><img src="termo1.jpg" alt="Grabado en metal"></div>
+            <div class="card-body">
+              <h4 class="card-title">Grabado en metal</h4>
+              <p class="muted">Grabado permanente en acero y superficies metálicas.</p>
+              <div class="price-box"><p class="price">Precio producto: según pieza</p><p class="price">Solo grabado láser: desde $X.XXX</p></div>
+              <a class="btn btn-dark btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20grabado%20en%20metal" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- TRABAJOS REALIZADOS -->
+    <!-- Trabajos realizados -->
     <section class="section" id="trabajos">
       <div class="container">
         <h2 class="section-title">Trabajos realizados</h2>
-        <div class="gallery">
-          <figure class="gallery-item">
-            <img src="mate1.jpg" alt="Trabajo de grabado láser en mate" loading="lazy" />
-            <figcaption>Mate clásico con diseño personalizado.</figcaption>
+        <p class="section-text">Ejemplos reales de nuestro trabajo en <strong>grabado láser personalizado</strong> para mates y accesorios.</p>
+        <div class="work-grid">
+          <figure class="work-item">
+            <img src="mate1.jpg" alt="Trabajo real de mate grabado">
+            <figcaption>Mate grabado con nombre y estilo clásico.</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="mate 2.jpg" alt="Trabajo de grabado láser premium" loading="lazy" />
-            <figcaption>Mate premium para regalo personalizado.</figcaption>
+          <figure class="work-item">
+            <img src="mate 2.jpg" alt="Trabajo real de mate premium">
+            <figcaption>Detalle fino en mate premium para regalo.</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="termo1.jpg" alt="Trabajo de grabado en metal sobre termo" loading="lazy" />
-            <figcaption>Grabado en metal de alta precisión.</figcaption>
+          <figure class="work-item">
+            <img src="termo1.jpg" alt="Trabajo real de termo grabado en metal">
+            <figcaption>Termo personalizado con grabado en metal.</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- NOSOTROS -->
+    <!-- Nosotros -->
     <section class="section" id="nosotros">
       <div class="container">
         <h2 class="section-title">Nosotros</h2>
-        <div class="about-box">
-          <p><strong>Qué es Maria Sol:</strong> Un emprendimiento dedicado al grabado láser personalizado en productos de uso diario y regalos.</p>
-          <p><strong>Misión:</strong> Crear piezas únicas con diseño, identidad y excelente terminación para cada cliente.</p>
-          <p><strong>Compromiso con la calidad:</strong> Trabajamos con precisión, materiales seleccionados y atención al detalle en cada pedido.</p>
-        </div>
+        <p class="section-text"><strong>Qué es el emprendimiento:</strong> Maria Sol es un emprendimiento especializado en grabados láser de alta precisión sobre mates, madera, metal y distintos productos personalizados.</p>
+        <p class="section-text"><strong>Misión:</strong> crear piezas únicas y duraderas que conecten con cada cliente, tanto para uso personal como para marcas y regalos.</p>
+        <p class="section-text"><strong>Compromiso con la calidad:</strong> cuidamos cada detalle para lograr acabados limpios, profesionales y permanentes en todos nuestros trabajos.</p>
       </div>
     </section>
 
-    <!-- PREGUNTAS FRECUENTES -->
+    <!-- Preguntas frecuentes -->
     <section class="section" id="faq">
       <div class="container">
         <h2 class="section-title">Preguntas frecuentes</h2>
-
-        <details>
-          <summary>¿Cómo comprar?</summary>
-          <p>Elegís el producto, enviás tu diseño por WhatsApp y confirmamos presupuesto y tiempos.</p>
-        </details>
-
-        <details>
-          <summary>¿Qué formas de pago aceptan?</summary>
-          <p>Transferencia, efectivo y otros medios a coordinar al momento de la compra.</p>
-        </details>
-
-        <details>
-          <summary>¿Hacen envíos?</summary>
-          <p>Sí, realizamos envíos. Consultá cobertura y costos según tu ubicación.</p>
-        </details>
-
-        <details>
-          <summary>¿Hay cambios o devoluciones?</summary>
-          <p>En productos personalizados no se realizan devoluciones, salvo falla de fabricación.</p>
-        </details>
-
-        <details>
-          <summary>¿Cómo curar un mate?</summary>
-          <p>Te enviamos una guía simple de curado para prolongar la vida útil del mate.</p>
-        </details>
-
-        <details>
-          <summary>¿Los productos tienen garantía?</summary>
-          <p>Sí, ofrecemos garantía por defectos de fabricación y te acompañamos en todo el proceso.</p>
-        </details>
+        <div class="faq">
+          <details>
+            <summary>¿Cómo comprar?</summary>
+            <p>Elegís el producto, nos enviás el diseño por WhatsApp y te confirmamos tiempos, precio y entrega.</p>
+          </details>
+          <details>
+            <summary>¿Formas de pago?</summary>
+            <p>Aceptamos transferencia y otros medios coordinados por WhatsApp al momento del pedido.</p>
+          </details>
+          <details>
+            <summary>¿Hacen envíos?</summary>
+            <p>Sí, realizamos envíos y también podés consultar por retiro coordinado.</p>
+          </details>
+          <details>
+            <summary>¿Hay cambios o devoluciones?</summary>
+            <p>En productos personalizados se evalúa cada caso. Si hay un error de producción, buscamos la mejor solución.</p>
+          </details>
+          <details>
+            <summary>¿Cómo curar un mate?</summary>
+            <p>Lavalo, hidratá la yerba por tandas y evitá agua hirviendo directa en el primer uso para mejorar su vida útil.</p>
+          </details>
+          <details>
+            <summary>¿Qué garantía tienen los grabados?</summary>
+            <p>El grabado láser es permanente en la superficie trabajada y realizamos control de calidad antes de entregar.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- Contacto -->
     <section class="section" id="contacto">
       <div class="container">
         <h2 class="section-title">Contacto</h2>
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h3>WhatsApp</h3>
-            <p><a href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer">+54 9 11 5642-4672</a></p>
-          </article>
-          <article class="contact-card">
-            <h3>Email</h3>
-            <p><a href="mailto:contacto@mariasolgrabados.com">contacto@mariasolgrabados.com</a></p>
-          </article>
-          <article class="contact-card">
-            <h3>Teléfono</h3>
-            <p><a href="tel:+541156424672">11 5642-4672</a></p>
-          </article>
+        <p class="section-text">Escribinos para cotizar tu <strong>grabado láser personalizado</strong> y recibir asesoramiento.</p>
+        <div class="contact-list">
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer">+54 9 11 5642-4672</a></p>
+          <p><strong>Email:</strong> <a href="mailto:contacto@mariasolgrabados.com">contacto@mariasolgrabados.com</a></p>
+          <p><strong>Teléfono:</strong> <a href="tel:+541156424672">11 5642-4672</a></p>
         </div>
+        <a class="btn" href="https://wa.me/5491156424672?text=Hola%20Maria%20Sol%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© Maria Sol · Grabado láser personalizado · Mates grabados · Regalos personalizados</div>
+    © Maria Sol - Grabado Láser Personalizado. Sitio listo para GitHub Pages.
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
-  <a class="floating-wa" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">✆</a>
+  <!-- Botón flotante de WhatsApp -->
+  <a class="floating-wa" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">💬</a>
 </body>
 </html>
