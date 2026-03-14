@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Maria Sol: grabado láser personalizado en mates, madera y metal. Tienda con filtros por precio, material y producto, carrito visible y compra por WhatsApp.">
-  <meta name="keywords" content="grabado láser personalizado, mates grabados, regalos personalizados, grabado en madera, grabado en metal, fotograbado, grabado simple">
+  <meta name="description" content="Maria Sol - Grabado láser personalizado. Catálogo de mates y bombillas con carrito y compra por WhatsApp.">
+  <meta name="keywords" content="grabado láser personalizado, mates grabados, regalos personalizados, grabado en metal">
   <meta name="robots" content="index,follow">
   <title>Maria Sol | Grabado Láser Personalizado</title>
   <style>
@@ -19,87 +19,34 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
-      color: var(--black);
-      background: var(--white);
-      line-height: 1.55;
-    }
-
+    body { font-family: "Montserrat", "Segoe UI", Arial, sans-serif; color: var(--black); background: var(--white); line-height: 1.55; }
     img { width: 100%; display: block; }
-    .container { width: min(1160px, 92%); margin: 0 auto; }
+    .container { width: min(1180px, 92%); margin: 0 auto; }
     .section { padding: 48px 0; }
     .title { font-size: clamp(1.7rem, 4vw, 2.35rem); margin-bottom: 14px; }
     .text { margin-bottom: 12px; color: #2b2b2b; max-width: 900px; }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(16,16,16,.98);
-      border-bottom: 2px solid var(--gold);
-    }
-
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .brand {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: .3px;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 7px;
-    }
-
-    .links a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: .86rem;
-      border-radius: 8px;
-      padding: 8px 10px;
-      transition: background .25s ease, color .25s ease;
-    }
-
+    .topbar { position: sticky; top: 0; z-index: 50; background: rgba(16,16,16,.98); border-bottom: 2px solid var(--gold); }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .brand { color: var(--white); text-decoration: none; font-weight: 800; letter-spacing: .3px; }
+    .links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+    .links a { color: var(--white); text-decoration: none; font-weight: 600; font-size: .86rem; border-radius: 8px; padding: 8px 10px; transition: background .25s ease, color .25s ease; }
     .links a:hover { background: var(--gold); color: var(--black); }
 
-    /* Menú aparte solicitado */
-    .info-menu-wrap {
-      background: #151515;
-      border-bottom: 1px solid #2c2c2c;
-    }
-
-    .info-menu {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 10px 0;
-    }
-
+    .info-menu-wrap { background: #151515; border-bottom: 1px solid #2c2c2c; }
+    .info-menu { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 0; }
     .info-menu a {
       text-decoration: none;
       color: var(--white);
-      background: #1f1f1f;
-      border: 1px solid var(--gold);
+      background: transparent;
+      border: none; /* solicitado: sin borde resaltado */
       border-radius: 999px;
       padding: 7px 12px;
       font-size: .83rem;
       font-weight: 700;
-      transition: transform .2s ease, background .25s ease, color .25s ease;
+      transition: background .25s ease, color .25s ease;
     }
-
-    .info-menu a:hover { background: var(--gold); color: var(--black); transform: translateY(-1px); }
+    .info-menu a:hover { background: #252525; color: var(--white); }
 
     .hero {
       min-height: 75vh;
@@ -110,279 +57,88 @@
         linear-gradient(105deg, rgba(16,16,16,.84), rgba(16,16,16,.58)),
         url("https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?auto=format&fit=crop&w=1700&q=70") center/cover no-repeat;
     }
-
     .hero-content { max-width: 760px; padding: 48px 0; animation: fadeUp .7s ease both; }
     .hero h1 { font-size: clamp(2.1rem, 5vw, 3.7rem); line-height: 1.1; margin-bottom: 12px; }
     .hero p { margin-bottom: 18px; color: #efefef; font-size: clamp(1rem, 2vw, 1.14rem); }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      border: 2px solid var(--black);
-      background: var(--black);
-      color: var(--white);
-      padding: 12px 22px;
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border-radius: 999px; text-decoration: none; font-weight: 700;
+      border: 2px solid var(--black); background: var(--black); color: var(--white);
+      padding: 12px 22px; cursor: pointer;
+      transition: transform .2s ease, box-shadow .25s ease, background .25s ease;
     }
-
     .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-
-    .btn-wa {
-      border-color: var(--wa);
-      background: var(--wa);
-      color: var(--white);
-    }
-
-    .btn-wa:hover {
-      background: #0a7267;
-      color: var(--white);
-    }
-
+    .btn-wa { border-color: var(--wa); background: var(--wa); color: var(--white); }
+    .btn-wa:hover { background: #0a7267; }
     .btn-block { width: 100%; border-radius: 10px; padding: 11px 12px; font-size: .95rem; }
 
-    .filters {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 10px;
-      margin: 14px 0 18px;
-      background: var(--soft);
-      border: 1px solid #ebebeb;
-      border-radius: 12px;
-      padding: 12px;
-    }
-
+    .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 14px 0 18px; background: var(--soft); border: 1px solid #ebebeb; border-radius: 12px; padding: 12px; }
     .filters label { display: grid; gap: 5px; font-size: .87rem; font-weight: 700; }
-    .filters select,
-    .filters input {
-      border: 1px solid #d8d8d8;
-      border-radius: 8px;
-      padding: 9px;
-      font: inherit;
-      font-size: .92rem;
-      background: #fff;
-    }
+    .filters select, .filters input { border: 1px solid #d8d8d8; border-radius: 8px; padding: 9px; font: inherit; font-size: .92rem; background: #fff; }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 15px;
-    }
-
-    .card {
-      border: 1px solid #ebebeb;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(16,16,16,.07);
-      transition: transform .27s ease, box-shadow .27s ease;
-      animation: fadeUp .6s ease both;
-      background: #fff;
-    }
-
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+    .card { border: 1px solid #ebebeb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(16,16,16,.07); transition: transform .27s ease, box-shadow .27s ease; animation: fadeUp .6s ease both; background: #fff; }
     .card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-
     .media { height: 205px; overflow: hidden; background: #f3f3f3; }
     .media img { height: 100%; object-fit: cover; transition: transform .45s ease; }
     .card:hover .media img { transform: scale(1.08); }
-
     .body { padding: 14px; display: grid; gap: 8px; }
-    .name { font-weight: 700; font-size: 1.02rem; }
-    .desc { color: #373737; font-size: .95rem; min-height: 44px; }
+    .name { font-weight: 700; font-size: 1rem; }
+    .desc { color: #373737; font-size: .94rem; min-height: 44px; }
     .meta { font-size: .86rem; color: #4a4a4a; }
     .price { font-weight: 700; }
 
-    .subtitle {
-      font-size: 1.25rem;
-      margin: 20px 0 10px;
-      border-left: 4px solid var(--gold);
-      padding-left: 10px;
-    }
-
-    .pricing-grid,
-    .contact-grid,
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 12px;
-    }
-
-    .box {
-      border: 1px solid #ebebeb;
-      border-radius: 12px;
-      padding: 14px;
-      box-shadow: 0 3px 10px rgba(16,16,16,.06);
-    }
-
+    .pricing-grid, .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; }
+    .box { border: 1px solid #ebebeb; border-radius: 12px; padding: 14px; box-shadow: 0 3px 10px rgba(16,16,16,.06); }
     .faq { display: grid; gap: 10px; }
-    details {
-      border: 1px solid #e8e8e8;
-      border-radius: 10px;
-      padding: 10px 12px;
-      background: #fcfcfc;
-      transition: border-color .25s ease;
-    }
+    details { border: 1px solid #e8e8e8; border-radius: 10px; padding: 10px 12px; background: #fcfcfc; transition: border-color .25s ease; }
     details[open] { border-color: var(--gold); }
     summary { list-style: none; cursor: pointer; font-weight: 700; }
     summary::-webkit-details-marker { display: none; }
     details p { margin-top: 8px; font-size: .95rem; color: #2c2c2c; }
 
-    .comment-form {
-      margin-top: 14px;
-      border: 1px solid #e8e8e8;
-      border-radius: 12px;
-      padding: 12px;
-      display: grid;
-      gap: 9px;
-      background: #fcfcfc;
-    }
-
-    .comment-form input,
-    .comment-form textarea,
-    .comment-form select {
-      border: 1px solid #d8d8d8;
-      border-radius: 8px;
-      padding: 10px;
-      font: inherit;
-    }
-
-    .comment-item {
-      border: 1px solid #ececec;
-      border-radius: 10px;
-      padding: 10px;
+    .separated-info {
+      border-top: 3px solid var(--gold);
+      border-bottom: 3px solid var(--gold);
       background: #fff;
     }
 
-    .stars { color: #d39810; font-size: .92rem; }
-
-    /* Carrito visible y amigable */
     .cart-fab {
-      position: fixed;
-      right: 16px;
-      top: 92px;
-      z-index: 60;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 2px solid var(--gold);
-      background: #fff;
-      color: var(--black);
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      box-shadow: var(--shadow);
-      transition: transform .2s ease;
+      position: fixed; right: 16px; top: 92px; z-index: 60; width: 60px; height: 60px;
+      border-radius: 50%; border: 2px solid var(--gold); background: #fff; color: var(--black);
+      display: grid; place-items: center; cursor: pointer; box-shadow: var(--shadow); transition: transform .2s ease;
     }
-
     .cart-fab:hover { transform: scale(1.05); }
     .cart-fab.bump { animation: bump .45s ease; }
-
-    .cart-badge {
-      position: absolute;
-      top: -6px;
-      right: -6px;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: var(--wa);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: .78rem;
-      font-weight: 800;
-      border: 2px solid #fff;
-    }
+    .cart-badge { position: absolute; top: -6px; right: -6px; width: 24px; height: 24px; border-radius: 50%; background: var(--wa); color: #fff; display: grid; place-items: center; font-size: .78rem; font-weight: 800; border: 2px solid #fff; }
 
     .cart-panel {
-      position: fixed;
-      right: 16px;
-      top: 160px;
-      width: min(360px, 92vw);
-      max-height: 72vh;
-      overflow: auto;
-      background: #fff;
-      border: 1px solid #e8e8e8;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      z-index: 55;
-      padding: 12px;
-      display: none;
+      position: fixed; right: 16px; top: 160px; width: min(360px, 92vw); max-height: 72vh; overflow: auto;
+      background: #fff; border: 1px solid #e8e8e8; border-radius: 14px; box-shadow: var(--shadow);
+      z-index: 55; padding: 12px; display: none;
     }
-
     .cart-panel.open { display: grid; gap: 10px; }
     .cart-item { border: 1px solid #ededed; border-radius: 10px; padding: 10px; display: grid; gap: 6px; }
     .line { display: flex; justify-content: space-between; gap: 8px; }
     .qty { display: flex; align-items: center; gap: 8px; }
-    .qty button {
-      width: 29px; height: 29px;
-      border-radius: 7px;
-      border: 1px solid #d7d7d7;
-      background: #fff;
-      cursor: pointer;
-      font-weight: 800;
-    }
+    .qty button { width: 29px; height: 29px; border-radius: 7px; border: 1px solid #d7d7d7; background: #fff; cursor: pointer; font-weight: 800; }
 
     .floating-wa {
-      position: fixed;
-      left: 16px;
-      bottom: 16px;
-      width: 58px;
-      height: 58px;
-      z-index: 60;
-      border-radius: 50%;
-      background: var(--wa);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      text-decoration: none;
-      font-size: 1.65rem;
-      box-shadow: 0 8px 20px rgba(7,94,84,.45);
-      transition: transform .2s ease;
+      position: fixed; left: 16px; bottom: 16px; width: 58px; height: 58px; z-index: 60;
+      border-radius: 50%; background: var(--wa); color: #fff; display: grid; place-items: center;
+      text-decoration: none; font-size: 1.65rem; box-shadow: 0 8px 20px rgba(7,94,84,.45); transition: transform .2s ease;
     }
-
     .floating-wa:hover { transform: scale(1.08); }
 
-    .footer-social {
-      margin-top: 8px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      font-size: .95rem;
-    }
+    .footer-social { margin-top: 8px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-size: .95rem; }
+    .footer-social a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; font-weight: 600; }
+    footer { margin-top: 24px; background: var(--black); color: #fff; text-align: center; padding: 18px; font-size: .92rem; }
 
-    .footer-social a {
-      color: #fff;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-weight: 600;
-    }
+    /* BLOQUE EDITABLE: podés cambiar textos libremente en este HTML */
 
-    footer {
-      margin-top: 24px;
-      background: var(--black);
-      color: #fff;
-      text-align: center;
-      padding: 18px;
-      font-size: .92rem;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes bump {
-      0% { transform: scale(1); }
-      35% { transform: scale(1.18); }
-      100% { transform: scale(1); }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes bump { 0% { transform: scale(1); } 35% { transform: scale(1.18); } 100% { transform: scale(1); } }
 
     @media (max-width: 820px) {
       .nav { flex-direction: column; justify-content: center; padding: 10px 0; }
@@ -398,6 +154,7 @@
     <nav class="container nav" aria-label="Navegación principal">
       <a class="brand" href="#inicio">Maria Sol | Grabado Láser</a>
       <div class="links">
+        <a href="#inicio">Inicio</a>
         <a href="#productos">Productos</a>
         <a href="#precios">Precios</a>
         <a href="#trabajos">Trabajos</a>
@@ -410,7 +167,6 @@
     <nav class="container info-menu" aria-label="Menú aparte de información">
       <a href="#nosotros">Nosotros</a>
       <a href="#faq">Preguntas frecuentes</a>
-      <a href="#comentarios">Comentarios y valoraciones</a>
       <a href="#terminos">Términos y condiciones</a>
       <a href="#seguridad">Seguridad</a>
     </nav>
@@ -431,8 +187,10 @@
 
   <section class="hero" id="inicio">
     <div class="container hero-content">
+      <!-- TEXTO EDITABLE: Título principal -->
       <h1>Grabado láser personalizado para regalos que se recuerdan</h1>
-      <p>Realizamos <strong>mates grabados</strong>, accesorios y piezas únicas con acabado premium en <strong>grabado en madera</strong> y <strong>grabado en metal</strong>. Atención rápida y diseños hechos a medida.</p>
+      <!-- TEXTO EDITABLE: subtítulo principal -->
+      <p>Realizamos mates y accesorios personalizados con acabados premium y atención rápida por WhatsApp.</p>
       <a class="btn btn-wa" href="https://wa.me/5491156424672?text=Hola%20Maria%20Sol%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
     </div>
   </section>
@@ -440,111 +198,126 @@
   <main>
     <section class="section" id="productos">
       <div class="container">
+        <!-- TEXTO EDITABLE: título de productos -->
         <h2 class="title">Galería de productos</h2>
-        <p class="text">Ahora podés filtrar por <strong>precio</strong>, <strong>material</strong> y <strong>producto</strong>, además de agregar al carrito con un clic.</p>
+        <p class="text">Filtrá por producto, material o precio para encontrar más rápido lo que buscás.</p>
 
         <div class="filters">
           <label>Producto
             <select id="filterProduct">
               <option value="all">Todos</option>
               <option value="mates">Mates</option>
-              <option value="accesorios">Accesorios</option>
+              <option value="bombillas">Bombillas</option>
               <option value="grabados">Grabados personalizados</option>
             </select>
           </label>
           <label>Material
             <select id="filterMaterial">
               <option value="all">Todos</option>
-              <option value="calabaza">Calabaza</option>
               <option value="acero">Acero</option>
-              <option value="cuero">Cuero</option>
-              <option value="madera">Madera</option>
-              <option value="metal">Metal</option>
+              <option value="alpaca">Alpaca</option>
+              <option value="calabaza">Calabaza</option>
+              <option value="aluminio">Aluminio</option>
             </select>
           </label>
           <label>Precio máximo
             <select id="filterPrice">
               <option value="all">Sin límite</option>
-              <option value="7000">Hasta $7.000</option>
-              <option value="20000">Hasta $20.000</option>
-              <option value="30000">Hasta $30.000</option>
+              <option value="15000">Hasta $15.000</option>
+              <option value="25000">Hasta $25.000</option>
+              <option value="35000">Hasta $35.000</option>
               <option value="50000">Hasta $50.000</option>
             </select>
           </label>
           <label>Buscar producto
-            <input id="searchInput" type="text" placeholder="Ej: mate, termo, bombilla">
+            <input id="searchInput" type="text" placeholder="Ej: imperial, bombilla">
           </label>
         </div>
 
         <div class="grid" id="productGrid">
-          <article class="card product" data-product="mates" data-material="calabaza" data-price="22000" data-name="Mate imperial">
-            <div class="media"><img src="mate1.jpg" alt="Mate imperial grabado"></div>
-            <div class="body">
-              <h3 class="name">Mate imperial</h3>
-              <p class="desc">Mate grabado de alta calidad para regalo.</p>
-              <p class="meta">Material: calabaza</p>
-              <p class="price">Precio producto: $22.000</p>
-              <button class="btn add-cart" type="button">Agregar al carrito</button>
-              <a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20el%20Mate%20imperial" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-            </div>
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="32000" data-name="Mate térmico">
+            <div class="media"><img src="mate1.jpg" alt="Mate térmico"></div>
+            <div class="body"><h3 class="name">Mate térmico</h3><p class="desc">Mate térmico de alta conservación.</p><p class="meta">Material: calabaza</p><p class="price">$32.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20t%C3%A9rmico" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
           </article>
 
-          <article class="card product" data-product="mates" data-material="cuero" data-price="21000" data-name="Mate camionero">
-            <div class="media"><img src="mate 2.jpg" alt="Mate camionero"></div>
-            <div class="body">
-              <h3 class="name">Mate camionero</h3>
-              <p class="desc">Estilo clásico con terminación prolija.</p>
-              <p class="meta">Material: cuero</p>
-              <p class="price">Precio producto: $21.000</p>
-              <button class="btn add-cart" type="button">Agregar al carrito</button>
-              <a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20el%20Mate%20camionero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-            </div>
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="35000" data-name="Imperial de calabaza forrado en cuero">
+            <div class="media"><img src="mate 2.jpg" alt="Imperial de calabaza forrado en cuero"></div>
+            <div class="body"><h3 class="name">Imperial de calabaza forrado en cuero</h3><p class="desc">Terminación clásica forrada.</p><p class="meta">Material: calabaza</p><p class="price">$35.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Imperial%20de%20calabaza%20forrado%20en%20cuero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
           </article>
 
-          <article class="card product" data-product="accesorios" data-material="acero" data-price="29000" data-name="Termo">
-            <div class="media"><img src="termo1.jpg" alt="Termo personalizado"></div>
-            <div class="body">
-              <h3 class="name">Termo</h3>
-              <p class="desc">Termo de acero ideal para grabado en metal.</p>
-              <p class="meta">Material: acero</p>
-              <p class="price">Precio producto: $29.000</p>
-              <button class="btn add-cart" type="button">Agregar al carrito</button>
-              <a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20el%20Termo" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-            </div>
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="30000" data-name="Imperial de calabaza ecológico simil cuero">
+            <div class="media"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=70" alt="Imperial ecológico simil cuero"></div>
+            <div class="body"><h3 class="name">Imperial de calabaza ecológico simil cuero</h3><p class="desc">Opción ecológica, liviana y resistente.</p><p class="meta">Material: calabaza</p><p class="price">$30.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Imperial%20ecol%C3%B3gico%20simil%20cuero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
           </article>
 
-          <article class="card product" data-product="accesorios" data-material="metal" data-price="5500" data-name="Bombilla">
-            <div class="media"><img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=70" alt="Bombilla personalizada"></div>
-            <div class="body">
-              <h3 class="name">Bombilla</h3>
-              <p class="desc">Bombilla personalizada con nombre o logo.</p>
-              <p class="meta">Material: metal</p>
-              <p class="price">Precio producto: $5.500</p>
-              <button class="btn add-cart" type="button">Agregar al carrito</button>
-              <a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20la%20Bombilla" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-            </div>
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="33000" data-name="Camionero de calabaza forrado cuero">
+            <div class="media"><img src="mate 2.jpg" alt="Camionero de calabaza forrado cuero"></div>
+            <div class="body"><h3 class="name">Camionero de calabaza forrado cuero</h3><p class="desc">Modelo camionero clásico.</p><p class="meta">Material: calabaza</p><p class="price">$33.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Camionero%20de%20calabaza%20forrado%20cuero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
           </article>
 
-          <article class="card product" data-product="grabados" data-material="madera" data-price="0" data-name="Grabado en madera">
-            <div class="media"><img src="https://images.unsplash.com/photo-1590246814883-57c511a1f7c5?auto=format&fit=crop&w=900&q=70" alt="Grabado en madera"></div>
-            <div class="body">
-              <h3 class="name">Grabado en madera</h3>
-              <p class="desc">Servicio de personalización sobre madera.</p>
-              <p class="meta">Material: madera</p>
-              <p class="price">Consultar según pieza</p>
-              <a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20grabado%20en%20madera" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-            </div>
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="28000" data-name="Camionero ecológico simil cuero">
+            <div class="media"><img src="mate1.jpg" alt="Camionero ecológico simil cuero"></div>
+            <div class="body"><h3 class="name">Camionero ecológico simil cuero</h3><p class="desc">Versión ecológica del camionero.</p><p class="meta">Material: calabaza</p><p class="price">$28.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Camionero%20ecol%C3%B3gico%20simil%20cuero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
           </article>
 
-          <article class="card product" data-product="grabados" data-material="metal" data-price="0" data-name="Grabado en metal">
-            <div class="media"><img src="termo1.jpg" alt="Grabado en metal"></div>
-            <div class="body">
-              <h3 class="name">Grabado en metal</h3>
-              <p class="desc">Grabado permanente en superficies metálicas.</p>
-              <p class="meta">Material: metal</p>
-              <p class="price">Consultar según pieza</p>
-              <a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20grabado%20en%20metal" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
-            </div>
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="36000" data-name="Mate imperial de calabaza animal print">
+            <div class="media"><img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=70" alt="Mate imperial animal print"></div>
+            <div class="body"><h3 class="name">Mate imperial de calabaza animal print</h3><p class="desc">Diseño destacado animal print.</p><p class="meta">Material: calabaza</p><p class="price">$36.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20imperial%20animal%20print" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="25000" data-name="Mate ranchero">
+            <div class="media"><img src="mate1.jpg" alt="Mate ranchero"></div>
+            <div class="body"><h3 class="name">Mate ranchero</h3><p class="desc">Estilo tradicional y cómodo.</p><p class="meta">Material: calabaza</p><p class="price">$25.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20ranchero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="aluminio" data-price="27000" data-name="Camionero de madera laqueado">
+            <div class="media"><img src="https://images.unsplash.com/photo-1581005433000-575a7f8f4f9a?auto=format&fit=crop&w=900&q=70" alt="Camionero de madera laqueado"></div>
+            <div class="body"><h3 class="name">Camionero de madera laqueado</h3><p class="desc">Acabado laqueado brillante.</p><p class="meta">Material: aluminio</p><p class="price">$27.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Camionero%20de%20madera%20laqueado" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="aluminio" data-price="29500" data-name="Mate de algarrobo aleación de aluminio">
+            <div class="media"><img src="https://images.unsplash.com/photo-1590246814883-57c511a1f7c5?auto=format&fit=crop&w=900&q=70" alt="Mate de algarrobo aleación de aluminio"></div>
+            <div class="body"><h3 class="name">Mate de algarrobo aleación de aluminio</h3><p class="desc">Algarrobo con refuerzo de aleación.</p><p class="meta">Material: aluminio</p><p class="price">$29.500</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20de%20algarrobo%20aleaci%C3%B3n%20de%20aluminio" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="aluminio" data-price="28500" data-name="Mate de madera laqueado con aplique">
+            <div class="media"><img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?auto=format&fit=crop&w=900&q=70" alt="Mate de madera laqueado con aplique"></div>
+            <div class="body"><h3 class="name">Mate de madera laqueado con aplique</h3><p class="desc">Modelo laqueado con detalle aplicado.</p><p class="meta">Material: aluminio</p><p class="price">$28.500</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20de%20madera%20laqueado%20con%20aplique" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="aluminio" data-price="26000" data-name="Mate de madera laqueado">
+            <div class="media"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=70" alt="Mate de madera laqueado"></div>
+            <div class="body"><h3 class="name">Mate de madera laqueado</h3><p class="desc">Línea de madera con acabado laqueado.</p><p class="meta">Material: aluminio</p><p class="price">$26.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20de%20madera%20laqueado" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="aluminio" data-price="30500" data-name="Mate de algarrobo fleje de aluminio">
+            <div class="media"><img src="https://images.unsplash.com/photo-1543572795-8ad8f6f28b5f?auto=format&fit=crop&w=900&q=70" alt="Mate de algarrobo fleje de aluminio"></div>
+            <div class="body"><h3 class="name">Mate de algarrobo fleje de aluminio</h3><p class="desc">Algarrobo con fleje de aluminio.</p><p class="meta">Material: aluminio</p><p class="price">$30.500</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20de%20algarrobo%20fleje%20de%20aluminio" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="29500" data-name="Mate imperial ecológico de calabaza">
+            <div class="media"><img src="mate1.jpg" alt="Mate imperial ecológico de calabaza"></div>
+            <div class="body"><h3 class="name">Mate imperial ecológico de calabaza</h3><p class="desc">Imperial ecológico de línea premium.</p><p class="meta">Material: calabaza</p><p class="price">$29.500</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Mate%20imperial%20ecol%C3%B3gico%20de%20calabaza" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="mates" data-material="calabaza" data-price="34000" data-name="Imperial de cerámica forrado en cuero">
+            <div class="media"><img src="mate 2.jpg" alt="Imperial de cerámica forrado en cuero"></div>
+            <div class="body"><h3 class="name">Imperial de cerámica forrado en cuero</h3><p class="desc">Cerámica interna y forrado exterior.</p><p class="meta">Material: calabaza</p><p class="price">$34.000</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Imperial%20de%20cer%C3%A1mica%20forrado%20en%20cuero" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="bombillas" data-material="acero" data-price="6500" data-name="Bombilla pico de loro de acero corta">
+            <div class="media"><img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=70" alt="Bombilla pico de loro de acero corta"></div>
+            <div class="body"><h3 class="name">Bombilla pico de loro de acero corta</h3><p class="desc">Diseño práctico de acero.</p><p class="meta">Material: acero</p><p class="price">$6.500</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Bombilla%20pico%20de%20loro%20corta" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="bombillas" data-material="acero" data-price="7800" data-name="Bombilla pico de loro de acero larga">
+            <div class="media"><img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?auto=format&fit=crop&w=900&q=70" alt="Bombilla pico de loro de acero larga"></div>
+            <div class="body"><h3 class="name">Bombilla pico de loro de acero larga</h3><p class="desc">Mayor largo para termos grandes.</p><p class="meta">Material: acero</p><p class="price">$7.800</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Bombilla%20pico%20de%20loro%20larga" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
+          </article>
+
+          <article class="card product" data-product="bombillas" data-material="alpaca" data-price="8900" data-name="Bombilla pico de loro enredadera níquel">
+            <div class="media"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=70" alt="Bombilla pico de loro enredadera níquel"></div>
+            <div class="body"><h3 class="name">Bombilla pico de loro enredadera níquel</h3><p class="desc">Detalle enredadera y baño níquel.</p><p class="meta">Material: alpaca</p><p class="price">$8.900</p><button class="btn add-cart" type="button">Agregar al carrito</button><a class="btn btn-wa btn-block" href="https://wa.me/5491156424672?text=Hola%2C%20quiero%20Bombilla%20pico%20de%20loro%20enredadera%20n%C3%ADquel" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div>
           </article>
         </div>
       </div>
@@ -554,14 +327,8 @@
       <div class="container">
         <h2 class="title">Precios de personalización</h2>
         <div class="pricing-grid">
-          <article class="box">
-            <h3>Fotograbado</h3>
-            <p>Desde <strong>$9.500</strong>. Incluye ajuste de imagen y prueba previa.</p>
-          </article>
-          <article class="box">
-            <h3>Grabado simple</h3>
-            <p>Desde <strong>$3.500</strong>. Ideal para texto, iniciales o trazos simples.</p>
-          </article>
+          <article class="box"><h3>Fotograbado</h3><p>Desde <strong>$9.500</strong>. Incluye ajuste de imagen y prueba previa.</p></article>
+          <article class="box"><h3>Grabado simple</h3><p>Desde <strong>$3.500</strong>. Ideal para texto o iniciales.</p></article>
         </div>
       </div>
     </section>
@@ -572,94 +339,56 @@
         <div class="grid">
           <figure class="card"><div class="media"><img src="mate1.jpg" alt="Trabajo de mate grabado"></div><figcaption class="body">Mate con grabado de nombre.</figcaption></figure>
           <figure class="card"><div class="media"><img src="mate 2.jpg" alt="Trabajo mate premium"></div><figcaption class="body">Detalle fino en mate premium.</figcaption></figure>
-          <figure class="card"><div class="media"><img src="termo1.jpg" alt="Trabajo en termo metálico"></div><figcaption class="body">Grabado láser duradero en metal.</figcaption></figure>
+          <figure class="card"><div class="media"><img src="termo1.jpg" alt="Trabajo en termo metálico"></div><figcaption class="body">Grabado láser en metal.</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="section" id="nosotros">
-      <div class="container">
-        <h2 class="title">Nosotros</h2>
-        <p class="text">Maria Sol es un emprendimiento dedicado al grabado láser personalizado para clientes particulares, regalos y marcas.</p>
-        <p class="text">Misión: crear productos útiles y estéticos con atención cercana, diseño claro y acabados de calidad.</p>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <h2 class="title">Preguntas frecuentes</h2>
-        <div class="faq">
-          <details><summary>¿Cómo comprar?</summary><p>Elegís producto o servicio, enviás tu idea por WhatsApp y confirmamos precio y plazos.</p></details>
-          <details><summary>¿Hacen envíos?</summary><p>Sí, coordinamos envío o retiro según zona.</p></details>
-          <details><summary>¿Qué garantía tiene el grabado?</summary><p>El grabado en material apto es permanente y revisamos calidad antes de entregar.</p></details>
+    <div class="separated-info">
+      <section class="section" id="nosotros">
+        <div class="container">
+          <h2 class="title">Nosotros</h2>
+          <p class="text">Maria Sol es un emprendimiento dedicado al grabado láser personalizado para clientes particulares, regalos y marcas.</p>
+          <p class="text">Misión: crear productos útiles y estéticos con acabados de calidad y atención cercana.</p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="comentarios">
-      <div class="container">
-        <h2 class="title">Comentarios y valoraciones</h2>
-        <p class="text">Esta sección muestra valoraciones reales ingresadas por visitantes en este sitio (se guardan en el navegador del usuario).</p>
-
-        <div class="reviews-grid" id="reviewsList">
-          <article class="comment-item"><p><strong>María G.</strong> <span class="stars">★★★★★</span></p><p>Excelente terminación en mi mate. Muy recomendado.</p></article>
-          <article class="comment-item"><p><strong>Lucas R.</strong> <span class="stars">★★★★★</span></p><p>Rápido, prolijo y con buena atención. Volveré a pedir.</p></article>
+      <section class="section" id="faq">
+        <div class="container">
+          <h2 class="title">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details><summary>¿Cómo comprar?</summary><p>Elegís producto o servicio, enviás tu idea por WhatsApp y confirmamos precio y plazos.</p></details>
+            <details><summary>¿Hacen envíos?</summary><p>Sí, coordinamos envío o retiro según zona.</p></details>
+            <details><summary>¿Qué garantía tiene el grabado?</summary><p>El grabado en material apto es permanente y revisamos calidad antes de entregar.</p></details>
+          </div>
         </div>
+      </section>
 
-        <form class="comment-form" id="reviewForm">
-          <label>Nombre
-            <input id="reviewName" type="text" maxlength="40" required>
-          </label>
-          <label>Valoración
-            <select id="reviewStars" required>
-              <option value="5">5 estrellas</option>
-              <option value="4">4 estrellas</option>
-              <option value="3">3 estrellas</option>
-              <option value="2">2 estrellas</option>
-              <option value="1">1 estrella</option>
-            </select>
-          </label>
-          <label>Comentario
-            <textarea id="reviewText" rows="3" maxlength="220" required></textarea>
-          </label>
-          <button class="btn" type="submit">Publicar valoración</button>
-        </form>
-      </div>
-    </section>
-
-    <section class="section" id="terminos">
-      <div class="container">
-        <h2 class="title">Términos y condiciones</h2>
-        <div class="faq">
-          <details open><summary>Condiciones generales</summary><p>Los pedidos personalizados requieren aprobación previa del diseño y pueden tener tiempos de producción variables según complejidad.</p></details>
-          <details><summary>Cambios y devoluciones</summary><p>En productos personalizados se evalúa cada caso. Si existe un error de fabricación, se ofrece solución.</p></details>
+      <section class="section" id="terminos">
+        <div class="container">
+          <h2 class="title">Términos y condiciones</h2>
+          <div class="faq">
+            <details open><summary>Condiciones generales</summary><p>Los pedidos personalizados requieren aprobación previa del diseño y pueden tener tiempos variables según complejidad.</p></details>
+            <details><summary>Cambios y devoluciones</summary><p>En productos personalizados se evalúa cada caso y se brinda solución ante errores de fabricación.</p></details>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="seguridad">
-      <div class="container">
-        <h2 class="title">Seguridad</h2>
-        <p class="text">Este sitio es estático y no almacena cuentas de usuario en servidor. Los datos compartidos por contacto se usan para atención comercial y seguimiento del pedido.</p>
-      </div>
-    </section>
+      <section class="section" id="seguridad">
+        <div class="container">
+          <h2 class="title">Seguridad</h2>
+          <p class="text">Este sitio es estático y no almacena cuentas de usuario en servidor. Los datos de contacto se usan para atención comercial del pedido.</p>
+        </div>
+      </section>
+    </div>
 
     <section class="section" id="contacto">
       <div class="container">
         <h2 class="title">Contacto</h2>
         <div class="contact-grid">
-          <article class="box">
-            <h3>WhatsApp</h3>
-            <p><a class="btn btn-wa" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer">+54 9 11 5642-4672</a></p>
-          </article>
-          <article class="box">
-            <h3>Email</h3>
-            <p><a href="mailto:contacto@mariasolgrabados.com">contacto@mariasolgrabados.com</a></p>
-          </article>
-          <article class="box">
-            <h3>Instagram</h3>
-            <p><a href="https://instagram.com/mariasolgrabados" target="_blank" rel="noopener noreferrer">@mariasolgrabados</a></p>
-          </article>
+          <article class="box"><h3>WhatsApp</h3><p><a class="btn btn-wa" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer">+54 9 11 5642-4672</a></p></article>
+          <article class="box"><h3>Email</h3><p><a href="mailto:contacto@mariasolgrabados.com">contacto@mariasolgrabados.com</a></p></article>
+          <article class="box"><h3>Instagram</h3><p><a href="https://instagram.com/mariasolgrabados" target="_blank" rel="noopener noreferrer">@mariasolgrabados</a></p></article>
         </div>
       </div>
     </section>
@@ -682,8 +411,7 @@
   <a class="floating-wa" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">💬</a>
 
   <script>
-    // ===== Carrito =====
-    const cartKey = 'mariasol_cart_v2';
+    const cartKey = 'mariasol_cart_v3';
     const cartFab = document.getElementById('cartFab');
     const cartPanel = document.getElementById('cartPanel');
     const cartBadge = document.getElementById('cartBadge');
@@ -695,11 +423,8 @@
     const toCurrency = (n) => new Intl.NumberFormat('es-AR').format(n);
 
     const getCart = () => {
-      try {
-        return JSON.parse(localStorage.getItem(cartKey)) || [];
-      } catch {
-        return [];
-      }
+      try { return JSON.parse(localStorage.getItem(cartKey)) || []; }
+      catch { return []; }
     };
 
     const saveCart = (cart) => localStorage.setItem(cartKey, JSON.stringify(cart));
@@ -721,9 +446,7 @@
     }
 
     function changeQty(name, delta) {
-      const cart = getCart()
-        .map((i) => i.name === name ? { ...i, qty: i.qty + delta } : i)
-        .filter((i) => i.qty > 0);
+      const cart = getCart().map((i) => i.name === name ? { ...i, qty: i.qty + delta } : i).filter((i) => i.qty > 0);
       saveCart(cart);
       renderCart();
     }
@@ -732,7 +455,6 @@
       const cart = getCart();
       const totalQty = cart.reduce((acc, i) => acc + i.qty, 0);
       const total = cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
-
       cartBadge.textContent = totalQty;
       cartTotalNode.innerHTML = `<strong>Total:</strong> $${toCurrency(total)}`;
 
@@ -771,22 +493,13 @@
     document.querySelectorAll('.add-cart').forEach((btn) => {
       btn.addEventListener('click', () => {
         const product = btn.closest('.product');
-        const name = product.dataset.name;
-        const price = Number(product.dataset.price);
-        addToCart(name, price);
+        addToCart(product.dataset.name, Number(product.dataset.price));
       });
     });
 
-    cartFab.addEventListener('click', () => {
-      cartPanel.classList.toggle('open');
-    });
+    cartFab.addEventListener('click', () => cartPanel.classList.toggle('open'));
+    clearCartBtn.addEventListener('click', () => { saveCart([]); renderCart(); });
 
-    clearCartBtn.addEventListener('click', () => {
-      saveCart([]);
-      renderCart();
-    });
-
-    // ===== Filtros =====
     const filterProduct = document.getElementById('filterProduct');
     const filterMaterial = document.getElementById('filterMaterial');
     const filterPrice = document.getElementById('filterPrice');
@@ -817,13 +530,8 @@
     [filterProduct, filterMaterial, filterPrice].forEach((el) => el.addEventListener('change', applyFilters));
     searchInput.addEventListener('input', applyFilters);
 
-      reviewForm.reset();
-      renderReviews();
-    });
-
     renderCart();
     applyFilters();
-    renderReviews();
   </script>
 </body>
 </html>
