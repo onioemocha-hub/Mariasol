@@ -1,319 +1,301 @@
--<!DOCTYPE html>
--<html>
--
--<head>
--<title>Mariasol Grabado Láser</title>
--
--<style>
--
--body{
--font-family: Arial;
--text-align:center;
--background:#f2f2f2;
--margin:0;
--}
--
--header{
--background:black;
--color:white;
--padding:40px;
--}
--
--section{
--padding:40px;
--}
--
--button{
--background:#25D366;
--color:white;
--border:none;
--padding:15px 25px;
--font-size:18px;
--border-radius:5px;
--cursor:pointer;
--}
--
--</style>
--
--</head>
--
--<body>
--
--<header>
--<h1>Mariasol Grabado Láser</h1>
--<p>Grabados personalizados</p>
--</header>
--
--<section>
--
--  <h2>Productos</h2>
--
--<img src="mate 2.jpg" width="250">
--<img src="mate1.jpg" width="250">
--<img src="termo1.jpg" width="250">
--
--
--<h2>Productos</h2>
--
--<p>Mates grabados</p>
--<p>Termos personalizados</p>
--<p>Regalos únicos</p>
--
--</section>
--
--<section>
--
--<h2>Pedidos</h2>
--
--<button onclick="window.location.href='https://wa.me/1156424672'">
--Pedir por WhatsApp
--</button>
--
--</section>
--
--<h2>Productos</h2>
--
--<div>
--<img src="mate1.jpg" width="250">
--<p>Mate Cuero</p>
--<p>$5</p>
--</div>
--
--<div>
--<img src="mate 2.jpg" width="250">
--<p>Mate Premium</p>
--<p>$2</p>
--</div>
--
--<div>
--<img src="termo1.jpg" width="250">
--<p>Termo media manija</p>
--<p>$8</p>
--</div>
--
--</body>
--
--</html>
-+<!DOCTYPE html>
-+<html lang="es">
-+<head>
-+  <meta charset="UTF-8">
-+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+  <title>Maria Sol | Grabados Láser</title>
-+  <style>
-+    :root {
-+      --bg: #f5f3ef;
-+      --text: #1d1d1d;
-+      --accent: #b88746;
-+      --dark: #111;
-+      --white: #fff;
-+      --wa: #25d366;
-+    }
-+
-+    * {
-+      box-sizing: border-box;
-+    }
-+
-+    body {
-+      margin: 0;
-+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-+      color: var(--text);
-+      background: var(--bg);
-+      line-height: 1.6;
-+    }
-+
-+    .container {
-+      width: min(1100px, 92%);
-+      margin: 0 auto;
-+    }
-+
-+    header {
-+      background: linear-gradient(120deg, var(--dark), #2a2a2a);
-+      color: var(--white);
-+      text-align: center;
-+      padding: 80px 20px;
-+    }
-+
-+    h1 {
-+      margin: 0;
-+      font-size: clamp(2rem, 5vw, 3rem);
-+      letter-spacing: 1px;
-+    }
-+
-+    .subtitle {
-+      margin-top: 12px;
-+      opacity: 0.9;
-+      font-size: 1.1rem;
-+    }
-+
-+    section {
-+      padding: 56px 0;
-+    }
-+
-+    h2 {
-+      font-size: 1.9rem;
-+      margin-bottom: 18px;
-+      color: var(--dark);
-+      position: relative;
-+      display: inline-block;
-+    }
-+
-+    h2::after {
-+      content: "";
-+      display: block;
-+      width: 64px;
-+      height: 3px;
-+      background: var(--accent);
-+      margin-top: 6px;
-+    }
-+
-+    .description {
-+      font-size: 1.05rem;
-+      max-width: 900px;
-+    }
-+
-+    .products {
-+      display: grid;
-+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-+      gap: 14px;
-+      padding: 0;
-+      margin: 20px 0 0;
-+      list-style: none;
-+    }
-+
-+    .products li {
-+      background: var(--white);
-+      padding: 14px 16px;
-+      border-left: 4px solid var(--accent);
-+      border-radius: 8px;
-+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-+      font-weight: 600;
-+    }
-+
-+    .gallery {
-+      display: grid;
-+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-+      gap: 18px;
-+      margin-top: 16px;
-+    }
-+
-+    .gallery figure {
-+      margin: 0;
-+      background: var(--white);
-+      border-radius: 12px;
-+      overflow: hidden;
-+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
-+    }
-+
-+    .gallery img {
-+      width: 100%;
-+      height: 260px;
-+      object-fit: cover;
-+      display: block;
-+    }
-+
-+    .gallery figcaption {
-+      padding: 12px 14px;
-+      font-weight: 600;
-+      background: #fdfdfd;
-+    }
-+
-+    .cta {
-+      text-align: center;
-+      padding-bottom: 70px;
-+    }
-+
-+    .wa-button {
-+      display: inline-block;
-+      background: var(--wa);
-+      color: var(--white);
-+      text-decoration: none;
-+      padding: 16px 28px;
-+      border-radius: 999px;
-+      font-size: 1.05rem;
-+      font-weight: 700;
-+      box-shadow: 0 6px 15px rgba(37, 211, 102, 0.35);
-+      transition: transform 0.2s ease, box-shadow 0.2s ease;
-+    }
-+
-+    .wa-button:hover {
-+      transform: translateY(-2px);
-+      box-shadow: 0 8px 16px rgba(37, 211, 102, 0.45);
-+    }
-+
-+    footer {
-+      text-align: center;
-+      padding: 22px;
-+      background: #ece7df;
-+      color: #4a4a4a;
-+      font-size: 0.95rem;
-+    }
-+  </style>
-+</head>
-+<body>
-+  <header>
-+    <div class="container">
-+      <h1>Maria Sol</h1>
-+      <p class="subtitle">Grabados láser personalizados con terminaciones duraderas y de excelente calidad.</p>
-+    </div>
-+  </header>
-+
-+  <main class="container">
-+    <section id="descripcion">
-+      <h2>Descripción</h2>
-+      <p class="description">
-+        Realizamos grabados láser de alta precisión sobre distintos materiales, especialmente metales, logrando terminaciones duraderas y de excelente calidad. Personalizamos una gran variedad de productos como mates, bombillas, termos, latas yerberas, azucareras y dijes para cadenas, entre otros objetos.
-+      </p>
-+      <p class="description">
-+        Ofrecemos diseños únicos para regalos, emprendimientos, marcas o uso personal. También trabajamos con artículos que trae el cliente, permitiendo personalizar tus propios objetos con nombres, frases, logos o diseños especiales.
-+      </p>
-+      <p class="description">
-+        Cada grabado se realiza con cuidado en los detalles para lograr un resultado prolijo, permanente y totalmente personalizado.
-+      </p>
-+    </section>
-+
-+    <section id="productos">
-+      <h2>Productos</h2>
-+      <ul class="products">
-+        <li>Mates grabados</li>
-+        <li>Bombillas personalizadas</li>
-+        <li>Termos</li>
-+        <li>Latas yerberas</li>
-+        <li>Azucareras</li>
-+        <li>Dijes para cadenas</li>
-+        <li>Regalos empresariales</li>
-+        <li>Objetos traídos por el cliente</li>
-+      </ul>
-+    </section>
-+
-+    <section id="fotos-trabajos">
-+      <h2>Fotos de trabajos</h2>
-+      <div class="gallery">
-+        <figure>
-+          <img src="mate1.jpg" alt="Mate grabado personalizado">
-+          <figcaption>Mate grabado personalizado</figcaption>
-+        </figure>
-+        <figure>
-+          <img src="mate 2.jpg" alt="Mate premium con grabado láser">
-+          <figcaption>Mate premium grabado</figcaption>
-+        </figure>
-+        <figure>
-+          <img src="termo1.jpg" alt="Termo metálico con diseño grabado">
-+          <figcaption>Termo con diseño grabado</figcaption>
-+        </figure>
-+      </div>
-+    </section>
-+
-+    <section class="cta" id="whatsapp">
-+      <h2>Botón WhatsApp</h2>
-+      <a class="wa-button" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer">
-+        Consultar por WhatsApp
-+      </a>
-+    </section>
-+  </main>
-+
-+  <footer>
-+    © Maria Sol - Grabados Láser
-+  </footer>
-+</body>
-+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Sol | Grabados Láser</title>
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --gold: #c9a24f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(1050px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--black);
+      color: var(--white);
+      padding: 32px 0;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .brand {
+      text-align: center;
+    }
+
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      margin: 0 auto 12px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: 0.8px;
+    }
+
+    .headline {
+      margin-top: 8px;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    main section {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    main section:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      margin-bottom: 14px;
+    }
+
+    .section-intro {
+      max-width: 860px;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .products-grid,
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      background: var(--white);
+      overflow: hidden;
+      animation: fadeUp 0.55s ease both;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 18px rgba(17, 17, 17, 0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.04);
+    }
+
+    .card-content {
+      padding: 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .product-name {
+      font-size: 1.04rem;
+      font-weight: 700;
+    }
+
+    .price {
+      font-size: 1rem;
+      color: var(--black);
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 13px 16px;
+      border-radius: 10px;
+      border: 2px solid var(--black);
+      background: var(--black);
+      color: var(--white);
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+
+    .how-to-buy {
+      display: grid;
+      gap: 10px;
+      font-size: 1rem;
+    }
+
+    .how-to-buy li {
+      margin-left: 20px;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding: 30px 0 38px;
+    }
+
+    .final-cta .btn {
+      width: min(420px, 100%);
+      font-size: 1.12rem;
+      padding: 16px;
+    }
+
+    footer {
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 16px;
+      font-size: 0.92rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 24px 0;
+      }
+
+      main section {
+        padding: 22px 0;
+      }
+
+      .card img {
+        height: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <div class="logo-mark">MS</div>
+      <h1>Maria Sol</h1>
+      <p class="headline">Grabados láser personalizados en metal y más materiales.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="que-haces">
+      <h2>Qué hacés</h2>
+      <p class="section-intro">Realizamos grabados láser de alta precisión sobre distintos materiales, especialmente metales, logrando terminaciones duraderas y de excelente calidad.</p>
+      <p class="section-intro">Personalizamos mates, bombillas, termos, latas yerberas, azucareras y dijes para cadenas. También trabajamos con artículos que trae el cliente para grabar nombres, frases, logos y diseños especiales.</p>
+      <p class="section-intro">Cada trabajo se hace con cuidado en los detalles para un resultado prolijo, permanente y totalmente personalizado.</p>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="products-grid">
+        <article class="card">
+          <img src="mate1.jpg" alt="Mate grabado">
+          <div class="card-content">
+            <p class="product-name">Mate grabado</p>
+            <p class="price">$15.000</p>
+            <a class="btn" href="https://wa.me/5491156424672?text=Hola%20Maria%20Sol%2C%20quiero%20pedir%20un%20mate%20grabado" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="mate 2.jpg" alt="Mate premium grabado">
+          <div class="card-content">
+            <p class="product-name">Mate premium grabado</p>
+            <p class="price">$18.000</p>
+            <a class="btn" href="https://wa.me/5491156424672?text=Hola%20Maria%20Sol%2C%20quiero%20pedir%20un%20mate%20premium%20grabado" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="termo1.jpg" alt="Termo grabado personalizado">
+          <div class="card-content">
+            <p class="product-name">Termo grabado</p>
+            <p class="price">$22.000</p>
+            <a class="btn" href="https://wa.me/5491156424672?text=Hola%20Maria%20Sol%2C%20quiero%20pedir%20un%20termo%20grabado" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="fotos-trabajos">
+      <h2>Fotos de trabajos</h2>
+      <div class="work-grid">
+        <figure class="card">
+          <img src="mate1.jpg" alt="Trabajo de grabado en mate">
+          <figcaption class="card-content">Grabado con nombre y detalle fino.</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="mate 2.jpg" alt="Trabajo de grabado en mate premium">
+          <figcaption class="card-content">Diseño premium para regalo personalizado.</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="termo1.jpg" alt="Trabajo de grabado en termo">
+          <figcaption class="card-content">Termo metálico con grabado duradero.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="como-comprar">
+      <h2>Cómo comprar</h2>
+      <ol class="how-to-buy">
+        <li>Elegí el producto o contanos qué objeto querés personalizar.</li>
+        <li>Enviá tu idea (nombre, frase, logo o diseño) por WhatsApp.</li>
+        <li>Te pasamos confirmación, precio final y tiempo de entrega.</li>
+      </ol>
+    </section>
+
+    <section class="final-cta" id="whatsapp">
+      <h2>Botón WhatsApp</h2>
+      <a class="btn" href="https://wa.me/5491156424672" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    © Maria Sol - Grabados Láser
+  </footer>
+</body>
+</html>
