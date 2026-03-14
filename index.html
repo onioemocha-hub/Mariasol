@@ -817,51 +817,6 @@
     [filterProduct, filterMaterial, filterPrice].forEach((el) => el.addEventListener('change', applyFilters));
     searchInput.addEventListener('input', applyFilters);
 
-    // ===== Comentarios reales ingresados por usuarios =====
-    const reviewKey = 'mariasol_reviews_v1';
-    const reviewForm = document.getElementById('reviewForm');
-    const reviewsList = document.getElementById('reviewsList');
-
-    function getReviews() {
-      try {
-        return JSON.parse(localStorage.getItem(reviewKey)) || [];
-      } catch {
-        return [];
-      }
-    }
-
-    function saveReviews(items) {
-      localStorage.setItem(reviewKey, JSON.stringify(items));
-    }
-
-    function renderReviews() {
-      const reviews = getReviews();
-      const dynamicNodes = reviewsList.querySelectorAll('[data-dynamic="1"]');
-      dynamicNodes.forEach((n) => n.remove());
-
-      reviews.forEach((r) => {
-        const stars = '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars);
-        const node = document.createElement('article');
-        node.className = 'comment-item';
-        node.dataset.dynamic = '1';
-        node.innerHTML = `<p><strong>${r.name}</strong> <span class="stars">${stars}</span></p><p>${r.text}</p>`;
-        reviewsList.appendChild(node);
-      });
-    }
-
-    reviewForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      const name = document.getElementById('reviewName').value.trim();
-      const stars = Number(document.getElementById('reviewStars').value);
-      const text = document.getElementById('reviewText').value.trim();
-
-      if (!name || !text || stars < 1 || stars > 5) return;
-
-      const reviews = getReviews();
-      reviews.unshift({ name, stars, text });
-      saveReviews(reviews.slice(0, 20));
-
       reviewForm.reset();
       renderReviews();
     });
